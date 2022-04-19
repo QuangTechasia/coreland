@@ -39,6 +39,19 @@ $(document).ready(function () {
     }
     setWidthText();
 
+	$(".toggle-form-search").click(function(){
+		$(this).toggleClass('active');
+		$(this).siblings('form').toggleClass('active');
+	});
+	$(document).mouseup(function (e) {
+		var container = $(".search-main");
+		if(!container.is(e.target) &&
+		container.has(e.target).length === 0) {
+			$('.search-main .toggle-form-search').removeClass('active');
+			$('.search-main form').removeClass('active');
+		}
+	});
+
 
 
 	for (let i = 0; i < 3; i++) {

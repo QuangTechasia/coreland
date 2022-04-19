@@ -395,7 +395,56 @@ nav#nav ul.wrap-menu select {
     transition: all .4s;
     margin-left: 10px;
 }
+.wrap-right .search-wrap.search-main{min-width: 39px; position: relative;}
+.wrap-right .search-wrap.search-main form{
+    position: absolute;
+    display: flex;
+    right: 0;
+    height: 39px;
+    border-radius: 20px;
+    overflow: hidden;
+    background-color: #FFF;
 
+}
+.wrap-right .search-wrap.search-main input{
+    padding: 0;
+    transition: all .4s;
+    width: 0;
+    color: var(--color-text);
+}
+.wrap-right .search-wrap.search-main button{
+    min-width: 37px;
+    height: 37px;
+    border-radius: 100%;
+    background-color: var(--color-main);
+    transition: all .4s;
+    margin-top: 1px;
+}
+.wrap-right .search-wrap.search-main .toggle-form-search{
+    display: flex;
+    position: relative;
+    z-index: 1;
+    width: 37px;
+    height: 37px;
+    background-color: var(--color-main);
+    border-radius: 100%;
+    justify-content: center;
+    align-items: center;
+    /* border: 1px solid #FFF; */
+}
+.wrap-right .search-wrap.search-main form.active{
+    z-index: 2;
+}
+.wrap-right .search-wrap.search-main form.active input{
+    width: 350px;
+    padding: 0 20px;
+}
+.wrap-right .search-wrap.search-main .toggle-form-search.active{
+    z-index: -1;
+}
+.wrap-right .search-wrap.search-main button:hover{
+    background-color: var(--color-blue-main);
+}
 .wrap-right .wrap-translate {
     border-color: var(--color-main);
 }
