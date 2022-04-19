@@ -4,9 +4,9 @@ $(document).ready(function () {
 
 	$(window).on('scroll', function () {
 		if ($(window).scrollTop()) {
-			$('#header').addClass('scroll');
+			$('#header:not(.header-project-detail-not-scroll)').addClass('scroll');
 		} else {
-			$('#header').removeClass('scroll')
+			$('#header:not(.header-project-detail-not-scroll)').removeClass('scroll')
 		};
 	});
 
@@ -17,9 +17,45 @@ $(document).ready(function () {
 	$(".sticky-nav-tab").click(function(){
 		$(this).parent().find(".sticky-nav-tab").removeClass('active');
 		$(this).addClass('active');
-	})
+	});
 
 
+	function setWidthText(){
+        let showChar = 350;
+        var ellipsestext = "...";
+        var data = ['box-content-ykien p'];
+        data.forEach( function(value){
+
+            $('.'+value).each(function() {
+                var content = $(this).html();
+                if(content.length > showChar) {
+                    var c = content.substr(0, showChar);
+                    var html = c + '<span class="moreellipses">' + ellipsestext+ '&nbsp';
+                    $(this).html(html);
+                }
+
+            });
+        });
+    }
+    setWidthText();
+
+
+
+	for (let i = 0; i < 3; i++) {
+		$("#active_video_youtube_"+i).click(function(){
+		   for (let y = 0; y < 3; y++) {
+			   var symbol_ = $("#video_youtube_"+y)[0].src;
+			   if(symbol_.indexOf("?") > -1){
+				symbol_.substr(0, symbol_.search("autoplay") - 1);
+				$("#video_youtube_"+y)[0].src = symbol_.substr(0, symbol_.search("autoplay") - 1);
+			   }
+		   }
+		   var symbol = $("#video_youtube_"+i)[0].src.indexOf("?") > -1 ? "&" : "?";
+		   $("#video_youtube_"+i)[0].src += symbol + "autoplay=1";
+		   console.log(symbol);
+		})
+		
+	}
 
 
 
@@ -27,7 +63,7 @@ $(document).ready(function () {
 
 });
 
-$('#slide-main').owlCarousel({
+$('#slide-main, #slide-blog-right-main').owlCarousel({
 	loop: true,
 	nav: true,
 	autoplay: false,
@@ -72,7 +108,7 @@ $('#slide-project-main, #slide-blog-index-main').owlCarousel({
 	}
 });
 
-$('#slide-customer-main, #slide-project-index-main, #slide-project-index-main-2, #slide-project-index-main-3').owlCarousel({
+$('#slide-customer-main, #slide-project-index-main, #slide-project-index-main-2, #slide-project-index-main-3, #slide-ykien-kh-main').owlCarousel({
 	loop: true,
 	nav: true,
 	autoplay: false,
