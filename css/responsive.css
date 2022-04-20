@@ -214,16 +214,22 @@
     nav#nav:not(.menu-footer) ul.wrap-menu {flex-direction: column;height: 100%; overflow: scroll; width: 100%; padding-top: 20px; padding-bottom: 20px;}
     nav#nav:not(.menu-footer) ul.wrap-menu li.item-menu > a {color: #FFFFFF;}
     nav#nav:not(.menu-footer) ul.wrap-menu select {width: 70px;height: 35px;margin-top: 23px; text-align: center;}
-    header#header div.icon-bar{position: absolute;top: 3px;right: 15px; width: 40px;height: 40px;padding: 0; display: flex;justify-content: center;align-items: center; cursor: pointer; transition: all .4s;}
-    header#header div.icon-bar span{ position: relative;width: 25px;height: 1.5px;background: var(--background-main);z-index: 1;display: block; transition: all .4s; z-index: 31;}
-    header#header div.icon-bar span:before, header#header div.icon-bar span:after{content: ''; position: absolute; width: 100%; background: var(--background-main); left: 0; height: 100%;}
+    header#header div.icon-bar{position: absolute;top: 10px;right: 15px; width: 36px;height: 36px;padding: 0; display: flex;justify-content: center;align-items: center; cursor: pointer; transition: all .4s; background-color: var(--background-main); border-radius: 100%;}
+    header#header div.icon-bar span{ position: relative;width: 20px;height: 1.5px;background: #FFF;z-index: 1;display: block; transition: all .4s; z-index: 31;}
+    header#header div.icon-bar span:before, header#header div.icon-bar span:after{content: ''; position: absolute; width: 100%; background: #FFF; left: 0; height: 100%;}
     header#header div.icon-bar span:before{top: -6px;}
-    header#header div.icon-bar span:after{top: 6px; width: 50%;}
+    header#header div.icon-bar span:after{top: 6px; width: 100%;}
     /* header#header.active{position: fixed;} */
-    header#header.active div.icon-bar span{background: #FFFFFF;}
-    header#header.active div.icon-bar span::before, header#header.active div.icon-bar span::after{opacity: 0; visibility: hidden;}
+    header#header.active div.icon-bar span{background: transparent;}
+    header#header.active div.icon-bar span::before, header#header.active div.icon-bar span::after{opacity: 0; visibility: hidden; top: 0; background: var(--color-main);}
     /* header#header.active nav#nav.menu-header{transform: translateX(0);} */
     header#header.active div.icon-bar:hover span::before, header#header.active div.icon-bar:hover span::after{opacity: 1; visibility: visible;}
+    header#header.active div.icon-bar span::before{
+        transform: rotate(45deg);
+    }
+     header#header.active div.icon-bar span::after{
+        transform: rotate(-45deg);
+     }
 
     .wrap-right {
         padding: 10px 0;
@@ -239,9 +245,9 @@
         top: 0;
         left: 10px;
     }
-    header#header>.container {
+    /* header#header>.container {
         justify-content: flex-end;
-    }
+    } */
 
     header#header.header-project-detail-not-scroll .logo{position: relative;}
     .title-main h2 {
