@@ -74,7 +74,14 @@ $(document).ready(function () {
 	$(".item-project ").parent('.col-md-6, .col-lg-4, .col-md-3').css({'padding-bottom':'20px'});
 	$(".item-project ").css({'margin-bottom':'0', 'height': '100%'});
 
-
+	// menu footer 
+	$(".icon-toggle-menu").click(function(){
+		$(this).siblings(".wrap-menu").find(".item-menu.active-efect").slideToggle();
+		$(this).siblings(".wrap-menu").toggleClass('active-mobile-border');
+		$(this).children().attr('class', function(index, attr){
+            return attr == 'fal fa-angle-right' ? 'fal fa-angle-down' : 'fal fa-angle-right' ;
+        });
+	})
 
 
 
