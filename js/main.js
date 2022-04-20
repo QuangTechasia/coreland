@@ -81,6 +81,13 @@ $(document).ready(function () {
 		$(this).children().attr('class', function(index, attr){
             return attr == 'fal fa-angle-right' ? 'fal fa-angle-down' : 'fal fa-angle-right' ;
         });
+	});
+
+	$(".icon-toggleSubmenu").click(function(){
+		$(this).children().attr('src', function(index, attr){
+			return attr == './images/icon-plus-submenu.png' ? './images/icon-minus-submenu.png' : './images/icon-plus-submenu.png';
+		});
+		$(this).siblings('.wrapper_naviga').slideToggle();
 	})
 
 
@@ -90,7 +97,7 @@ $(document).ready(function () {
 $('#slide-main, #slide-blog-right-main').owlCarousel({
 	loop: true,
 	nav: true,
-	autoplay: true,
+	autoplay: false,
 	autoplayTimeout: 5000,
 	autoplayHoverPause: true,
 	responsive: {
@@ -112,8 +119,8 @@ $('#slide-main, #slide-blog-right-main').owlCarousel({
 $('#slide-project-main, #slide-blog-index-main').owlCarousel({
 	loop: true,
 	nav: true,
-	autoplay: true,
-	margin: 20,
+	autoplay: false,
+	margin: 15,
 	autoplayTimeout: 5000,
 	autoplayHoverPause: true,
 	responsive: {
@@ -135,7 +142,7 @@ $('#slide-project-main, #slide-blog-index-main').owlCarousel({
 $('#slide-customer-main, #slide-project-index-main, #slide-project-index-main-2, #slide-project-index-main-3, #slide-ykien-kh-main').owlCarousel({
 	loop: true,
 	nav: true,
-	autoplay: true,
+	autoplay: false,
 	margin: 20,
 	autoplayTimeout: 5000,
 	autoplayHoverPause: true,
@@ -155,7 +162,7 @@ $('#slide-customer-main, #slide-project-index-main, #slide-project-index-main-2,
 $('#partner .owl-carousel').owlCarousel({
 	loop: true,
 	nav: true,
-	autoplay: true,
+	autoplay: false,
 	margin: 10,
 	autoplayTimeout: 5000,
 	autoplayHoverPause: true,
@@ -177,7 +184,7 @@ $('#partner .owl-carousel').owlCarousel({
 $('#slide-leader-main ,#slide-prize-main').owlCarousel({
 	loop: true,
 	nav: true,
-	autoplay: true,
+	autoplay: false,
 	margin: 20,
 	autoplayTimeout: 5000,
 	autoplayHoverPause: true,

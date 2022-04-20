@@ -720,6 +720,7 @@ ul.wrapper_naviga li:hover>.wrapper_recursive,
     color: var(--color-blue-main);
     text-transform: uppercase;
 }
+.title-main p{margin-top: 10px; margin-bottom: 20px;}
 
 .title-main h2 {
     font-size: 30px;
@@ -1251,6 +1252,7 @@ section.core-land .container {
     border: none;
     width: 100%;
     height: 300px;
+    overflow: hidden;
 }
 
 .wrap-leader.customer-wrap .item {
@@ -1259,6 +1261,10 @@ section.core-land .container {
 
 .wrap-leader.customer-wrap .image-customer img {
     transition: all .4s;
+    height: 100%;
+}
+#leadership.wrap-leader.customer-wrap .image-customer img{
+    border-radius: 5px;
 }
 
 .wrap-leader.customer-wrap .image-customer img:hover {
@@ -1272,6 +1278,7 @@ section.core-land .container {
 
 .wrap-prize.wrap-leader.customer-wrap .image-customer {
     height: 320px;
+    overflow: hidden;
 }
 
 .wrap-prize {
@@ -2938,12 +2945,51 @@ section#page-404 .wrap-button .border-color-main:hover {
 .wrap-blog-left, .wrap-blog-right{height: 100%;}
 nav#nav.menu-footer .icon-toggle-menu{display: none;}
 
+.wrap-search-form form{
+    border-radius: 5px;
+    border:2px solid rgb(221, 221, 221);
+    max-width: 915px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin: 45px auto 35px;
+}
+.wrap-search-form input{
+    width: 100%;
+    height: 45px;
+    padding: 5px 20px;
+    border-radius: 5px;
+}
+.wrap-search-form button{
+    background: var(--color-blue-main);
+    color: #FFF;
+    min-width: 80px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+}
+.wrap-search-form p{font-size: 30px;color: var(--color-blue-main); margin-bottom: 20px;}
+.wrap-search-form p .font-bold{}
 
-
-
-
-
-
+.Rectangle_56 {
+    border-style: solid;
+    border-width: 2px;
+    border-color: rgb(221, 221, 221);
+    border-radius: 5px;
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    left: 489px;
+    top: 641px;
+    width: 918px;
+    height: 60px;
+    z-index: 178;
+  }
+  
+  .owl-carousel.owl-drag .owl-item{padding-bottom: 15px;}
+  .wrap-project .owl-carousel .owl-nav button{top: 140px;}
+  .wrap-main-right .owl-carousel.owl-drag .owl-item{padding-bottom: 0;}
 
 
 
