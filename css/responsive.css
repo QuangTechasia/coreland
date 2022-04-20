@@ -35,6 +35,16 @@
     .wrap-blog-list-main .item-project .box-image {
         height: 210px;
     }
+    .sticky-nav-tab{padding: 0 15px; font-size: 14px;}
+    .item-blog .image-blog {
+        min-width: 135px;
+        height: 85px;
+    }
+    .wrap-main-right .wrap-blog-right .item-blog .image-blog img {max-width: 135px;}
+    .wrap-main-right .item-right .wrap-blog-right .content-blog-list h5 {font-size: 14px;    -webkit-line-clamp: 4;}
+    .wrap-content-project-detail-right .title-project {
+        font-size: 20px;
+    }
 }
 @media (max-width:1440px){
 }
@@ -67,6 +77,18 @@
     .wrap-blog-list-main .item-project .box-image {
         height: 185px;
     }
+    .sticky-nav-tab {
+        padding: 0 12px;
+        font-size: 12px;
+    }
+    .item-blog .image-blog {
+        min-width: 125px;
+        height: 80px;
+    }
+    .wrap-main-right .wrap-blog-right .item-blog .image-blog img {
+        max-width: 125px;
+    }
+    .wrap-main-right .item-right .wrap-blog-right .content-blog-list h5 {font-size: 13px; white-space: break-spaces;}
 }
 @media (max-width:1280px){
     .wrap-core-land .wrap-video .carousel-item iframe {
@@ -100,6 +122,21 @@
     header#header .logo img {
         width: 120px;
     }
+    .wrap-main-right .pd-20{padding: 15px 10px;}
+    .item-blog .image-blog {
+        min-width: 110px;
+        height: 70px;
+        margin-right: 10px;
+    }
+    .wrap-main-right .wrap-blog-right .item-blog .image-blog img {
+        max-width: 110px;
+    }
+    .sticky-nav-tabs {
+        height: 50px;
+    }
+    .sticky-nav-tabs-container .container .wrap-nav-tab {
+        height: 50px;
+    }
 }
 @media (max-width:1200px){
     body{font-size: 14px;}
@@ -126,6 +163,12 @@
         font-size: 15px;
     }
     .wrap-info-list *{font-size: 14px;}
+    .wrap-main-right .title-main h3 {
+        font-size: 16px;
+    }
+    .wrap-main-right .wrapfile-project h4 {
+        font-size: 18px;
+    }
 }
 @media (max-width:1080px){
     .item-project .box-image, .item-project .box-image img {
@@ -133,6 +176,16 @@
     }
     .title-main h2 {
         font-size: 24px;
+    }
+    .sticky-nav-tab {
+        padding: 0 7px;
+        font-size: 11px;
+    }
+    .container {
+        max-width: 95%;
+    }
+    .footer-first h3 {
+        font-size: 16px;
     }
 }
 @media (max-width:1024px){
@@ -177,7 +230,9 @@
 
 }
 @media (max-width:991px){
-
+    .footer-first h3 {
+        font-size: 15px;
+    }
 }
 @media (max-width:768px){
     .container {
