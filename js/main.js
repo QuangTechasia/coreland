@@ -120,21 +120,24 @@ $('#slide-project-main, #slide-blog-index-main').owlCarousel({
 	loop: true,
 	nav: true,
 	autoplay: false,
-	margin: 15,
 	autoplayTimeout: 5000,
 	autoplayHoverPause: true,
 	responsive: {
 		0: {
-			items: 1
+			items: 1,
+			margin: 10,
 		},
 		540: {
-			items: 2
+			items: 2,
+			margin: 10,
 		},
 		768: {
-			items: 3
+			items: 3,
+			margin: 15,
 		},
 		1024: {
-			items: 4
+			items: 4,
+			margin: 15,
 		}
 	}
 });
@@ -148,10 +151,12 @@ $('#slide-customer-main, #slide-project-index-main, #slide-project-index-main-2,
 	autoplayHoverPause: true,
 	responsive: {
 		0: {
-			items: 1
+			items: 1,
+			margin: 10,
 		},
 		540: {
-			items: 2
+			items: 2,
+			margin: 10,
 		},
 		768: {
 			items: 3
@@ -168,10 +173,10 @@ $('#partner .owl-carousel').owlCarousel({
 	autoplayHoverPause: true,
 	responsive: {
 		0: {
-			items: 1
+			items: 2
 		},
 		540: {
-			items: 2
+			items: 3
 		},
 		768: {
 			items: 3
@@ -190,16 +195,22 @@ $('#slide-leader-main ,#slide-prize-main').owlCarousel({
 	autoplayHoverPause: true,
 	responsive: {
 		0: {
-			items: 1
+			items: 2,
+			margin: 10,
 		},
 		540: {
-			items: 2
+			items: 3,
+			margin: 10,
 		},
 		768: {
 			items: 4
 		},
-		1024: {
+		1080: {
+			items: 5
+		},
+		1200:{
 			items: 6
 		}
+
 	}
 });
