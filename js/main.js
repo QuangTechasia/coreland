@@ -97,7 +97,7 @@ $(document).ready(function () {
 $('#slide-main').owlCarousel({
 	loop: true,
 	nav: true,
-	autoplay: false,
+	autoplay: true,
 	autoplayTimeout: 5000,
 	autoplayHoverPause: true,
 	responsive: {
@@ -118,7 +118,7 @@ $('#slide-main').owlCarousel({
 $('#slide-blog-right-main').owlCarousel({
 	loop: true,
 	nav: true,
-	autoplay: false,
+	autoplay: true,
 	autoplayTimeout: 5000,
 	autoplayHoverPause: true,
 	responsive: {
@@ -143,7 +143,7 @@ $('#slide-blog-right-main').owlCarousel({
 $('#slide-project-main, #slide-blog-index-main').owlCarousel({
 	loop: true,
 	nav: true,
-	autoplay: false,
+	autoplay: true,
 	autoplayTimeout: 5000,
 	autoplayHoverPause: true,
 	responsive: {
@@ -169,7 +169,7 @@ $('#slide-project-main, #slide-blog-index-main').owlCarousel({
 $('#slide-customer-main, #slide-project-index-main, #slide-project-index-main-2, #slide-project-index-main-3, #slide-ykien-kh-main').owlCarousel({
 	loop: true,
 	nav: true,
-	autoplay: false,
+	autoplay: true,
 	margin: 20,
 	autoplayTimeout: 5000,
 	autoplayHoverPause: true,
@@ -191,7 +191,7 @@ $('#slide-customer-main, #slide-project-index-main, #slide-project-index-main-2,
 $('#partner .owl-carousel').owlCarousel({
 	loop: true,
 	nav: true,
-	autoplay: false,
+	autoplay: true,
 	margin: 10,
 	autoplayTimeout: 5000,
 	autoplayHoverPause: true,
@@ -213,7 +213,7 @@ $('#partner .owl-carousel').owlCarousel({
 $('#slide-leader-main ,#slide-prize-main').owlCarousel({
 	loop: true,
 	nav: true,
-	autoplay: false,
+	autoplay: true,
 	margin: 20,
 	autoplayTimeout: 5000,
 	autoplayHoverPause: true,
