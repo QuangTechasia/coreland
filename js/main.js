@@ -21,7 +21,7 @@ $(document).ready(function () {
 
 
 	function setWidthText() {
-		let showChar = 350;
+		let showChar = 250;
 		var ellipsestext = "...";
 		var data = ['box-content-ykien p'];
 		data.forEach(function (value) {
@@ -41,14 +41,14 @@ $(document).ready(function () {
 
 	$(".toggle-form-search").click(function () {
 		$(this).toggleClass('active');
-		$(this).siblings('form').toggleClass('active');
+		$(this).siblings('.form').toggleClass('active');
 	});
 	$(document).mouseup(function (e) {
 		var container = $(".search-main");
 		if (!container.is(e.target) &&
 			container.has(e.target).length === 0) {
 			$('.search-main .toggle-form-search').removeClass('active');
-			$('.search-main form').removeClass('active');
+			$('.search-main .form').removeClass('active');
 		}
 	});
 
@@ -69,10 +69,21 @@ $(document).ready(function () {
 		})
 
 	}
+	function resize(){
+	var win = $(window).width();
+		if(win > 768){
+			$(".item-project").parent('.col-md-6, .col-lg-4, .col-md-3, .col-xl-4, .col-xl-3').css({ 'padding-bottom': '20px' });
+			$(".item-project").css({ 'margin-bottom': '0', 'height': '100%' });
+		}else{
+			$(".item-project").parent('.col-md-6, .col-lg-4, .col-md-3, .col-xl-4, .col-xl-3').css({ 'padding-bottom': '10px' });
+			$(".item-project").css({ 'margin-bottom': '0', 'height': '100%' });
+		}
+	}
+	resize();
+	$(window).on('resize', function(){
+        resize();
+    });
 
-
-	$(".item-project ").parent('.col-md-6, .col-lg-4, .col-md-3').css({ 'padding-bottom': '20px' });
-	$(".item-project ").css({ 'margin-bottom': '0', 'height': '100%' });
 
 	// menu footer 
 	$(".icon-toggle-menu").click(function () {
@@ -85,10 +96,44 @@ $(document).ready(function () {
 
 	$(".icon-toggleSubmenu").click(function () {
 		$(this).children().attr('src', function (index, attr) {
-			return attr == './images/icon-plus-submenu.png' ? './images/icon-minus-submenu.png' : './images/icon-plus-submenu.png';
+			return attr == '/images/icon-plus-submenu.png' ? '/images/icon-minus-submenu.png' : '/images/icon-plus-submenu.png';
 		});
 		$(this).siblings('.wrapper_naviga').slideToggle();
-	})
+	});
+
+
+	// popup
+    // (function() {
+    //     var visited = localStorage.getItem('visited');
+    //     localStorage.setItem('visited', true);
+    //     if (visited) {
+    //         $("body").addClass("remove-active");
+    //         $("body").css({"overflow":"auto"});
+    //         $(".popup-toppage").css({"opacity":"0", "visibility":"hidden" });
+    //     }
+    // })();
+    window.onload=function(){
+        function popupShow(){
+            $(".popup-toppage").css({"opacity": "1", "visibility": "visible"});
+            $(".popup-toppage").toggleClass("show-popup-toppage");
+        }
+        function popupHide(){
+            $(".popup-toppage").css({"opacity": "0", "visibility": "hidden"});
+            $(".popup-toppage").removeClass("show-popup-toppage");
+        }
+        setTimeout(popupShow, 1200);
+        $(document).mouseup(function (e) {
+            var container = $(".wrap-popup-toppage");
+            if(!container.is(e.target) && 
+            container.has(e.target).length === 0) {
+                container.hide();
+                popupHide();
+            }
+        });
+        $("#close-popup-topage").click(function(){
+            popupHide();
+        });
+    }
 
 
 
@@ -149,19 +194,19 @@ $('#slide-project-main, #slide-blog-index-main').owlCarousel({
 	responsive: {
 		0: {
 			items: 1,
-			margin: 10,
+			margin: 5,
 		},
 		540: {
 			items: 2,
-			margin: 10,
+			margin: 5,
 		},
 		768: {
 			items: 3,
-			margin: 15,
+			margin: 10,
 		},
 		1024: {
 			items: 4,
-			margin: 15,
+			margin: 10,
 		}
 	}
 });
@@ -170,7 +215,7 @@ $('#slide-customer-main, #slide-project-index-main, #slide-project-index-main-2,
 	loop: true,
 	nav: true,
 	autoplay: true,
-	margin: 20,
+	margin: 10,
 	autoplayTimeout: 5000,
 	autoplayHoverPause: true,
 	responsive: {
@@ -191,8 +236,8 @@ $('#slide-customer-main, #slide-project-index-main, #slide-project-index-main-2,
 $('#partner .owl-carousel').owlCarousel({
 	loop: true,
 	nav: true,
-	autoplay: true,
-	margin: 10,
+	autoplay: false,
+	margin: 5,
 	autoplayTimeout: 5000,
 	autoplayHoverPause: true,
 	responsive: {
@@ -214,7 +259,7 @@ $('#slide-leader-main ,#slide-prize-main').owlCarousel({
 	loop: true,
 	nav: true,
 	autoplay: true,
-	margin: 20,
+	margin: 10,
 	autoplayTimeout: 5000,
 	autoplayHoverPause: true,
 	responsive: {
