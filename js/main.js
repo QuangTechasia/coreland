@@ -140,28 +140,30 @@ $(document).ready(function () {
 });
 
 $('#slide-main').owlCarousel({
-	loop: true,
 	nav: true,
 	autoplay: true,
 	autoplayTimeout: 5000,
 	autoplayHoverPause: true,
 	responsive: {
 		0: {
-			items: 1
+			items: 1,
+			loop: ($('#slide-main .item').length > 1) ? true : false,
 		},
 		540: {
-			items: 1
+			items: 1,
+			loop: ($('#slide-main .item').length > 1) ? true : false,
 		},
 		768: {
-			items: 1
+			items: 1,
+			loop: ($('#slide-main .item').length > 1) ? true : false,
 		},
 		1024: {
-			items: 1
+			items: 1,
+			loop: ($('#slide-main .item').length > 1) ? true : false,
 		}
 	}
 });
 $('#slide-blog-right-main').owlCarousel({
-	loop: true,
 	nav: true,
 	autoplay: true,
 	autoplayTimeout: 5000,
@@ -170,23 +172,26 @@ $('#slide-blog-right-main').owlCarousel({
 		0: {
 			items: 1,
 			margin: 10,
+			loop: ($('#slide-blog-right-main .item').length > 1) ? true : false,
 		},
 		540: {
 			items: 2,
 			margin: 10,
+			loop: ($('#slide-blog-right-main .item').length > 2) ? true : false,
 		},
 		768: {
 			items: 3,
 			margin: 10,
+			loop: ($('#slide-blog-right-main .item').length > 3) ? true : false,
 		},
 		991: {
-			items: 1
+			items: 1,
+			loop: ($('#slide-blog-right-main .item').length > 1) ? true : false,
 		}
 	}
 });
 
-$('#slide-project-main, #slide-blog-index-main').owlCarousel({
-	loop: true,
+$('#slide-project-main').owlCarousel({
 	nav: true,
 	autoplay: true,
 	autoplayTimeout: 5000,
@@ -195,24 +200,61 @@ $('#slide-project-main, #slide-blog-index-main').owlCarousel({
 		0: {
 			items: 1,
 			margin: 5,
+			loop: ($('#slide-project-main .item').length > 1) ? true : false,
 		},
 		540: {
 			items: 2,
 			margin: 5,
+			loop: ($('#slide-project-main .item').length > 2) ? true : false,
 		},
 		768: {
 			items: 3,
 			margin: 10,
+			loop: ($('#slide-project-main .item').length > 3) ? true : false,
 		},
 		1024: {
 			items: 4,
 			margin: 10,
+			loop: ($('#slide-project-main .item').length > 4) ? true : false,
+		}
+	}
+});
+$('#slide-blog-index-main').owlCarousel({
+	nav: true,
+	autoplay: true,
+	autoplayTimeout: 5000,
+	autoplayHoverPause: true,
+	responsive: {
+		0: {
+			items: 1,
+			margin: 5,
+			loop: ($('#slide-blog-index-main .item').length > 1) ? true : false,
+		},
+		540: {
+			items: 2,
+			margin: 5,
+			loop: ($('#slide-blog-index-main .item').length > 2) ? true : false,
+		},
+		768: {
+			items: 3,
+			margin: 10,
+			loop: ($('#slide-blog-index-main .item').length > 3) ? true : false,
+		},
+		1024: {
+			items: 4,
+			margin: 10,
+			loop: ($('#slide-blog-index-main .item').length > 4) ? true : false,
 		}
 	}
 });
 
-$('#slide-customer-main, #slide-project-index-main, #slide-project-index-main-2, #slide-project-index-main-3, #slide-ykien-kh-main').owlCarousel({
-	loop: true,
+let arrClass = ['slide-customer-main',  
+				'slide-project-index-main',
+				'slide-project-index-main-2', 
+				'slide-project-index-main-3', 
+				'slide-ykien-kh-main'];
+for(var i = 0; i < arrClass.length; i++){
+$('#'+arrClass[i]).owlCarousel({
 	nav: true,
 	autoplay: true,
 	margin: 10,
@@ -222,19 +264,23 @@ $('#slide-customer-main, #slide-project-index-main, #slide-project-index-main-2,
 		0: {
 			items: 1,
 			margin: 10,
+			loop: ($('#'+arrClass[i]+ ' .item').length > 2) ? true : false,
 		},
 		540: {
 			items: 2,
 			margin: 10,
+			loop: ($('#'+arrClass[i]+ ' .item').length > 2) ? true : false,
 		},
 		768: {
-			items: 3
+			items: 3,
+			loop: ($('#'+arrClass[i]+ ' .item').length > 3) ? true : false,
 		}
 	}
 });
+};
+
 
 $('#partner .owl-carousel').owlCarousel({
-	loop: true,
 	nav: true,
 	autoplay: false,
 	margin: 5,
@@ -242,21 +288,20 @@ $('#partner .owl-carousel').owlCarousel({
 	autoplayHoverPause: true,
 	responsive: {
 		0: {
-			items: 2
+			items: 2,
+			loop: ($('#partner .item').length > 2) ? true : false,
 		},
 		540: {
-			items: 3
-		},
-		768: {
-			items: 3
+			items: 3,
+			loop: ($('#partner .item').length > 3) ? true : false,
 		},
 		1024: {
-			items: 5
+			items: 5,
+			loop: ($('#partner .item').length > 5) ? true : false,
 		}
 	}
 });
-$('#slide-leader-main ,#slide-prize-main').owlCarousel({
-	loop: true,
+$('#slide-leader-main').owlCarousel({
 	nav: true,
 	autoplay: true,
 	margin: 10,
@@ -266,19 +311,56 @@ $('#slide-leader-main ,#slide-prize-main').owlCarousel({
 		0: {
 			items: 2,
 			margin: 10,
+			loop: ($('#slide-leader-main .item').length > 2) ? true : false,
 		},
 		540: {
 			items: 3,
 			margin: 10,
+			loop: ($('#slide-leader-main .item').length > 3) ? true : false,
 		},
 		768: {
-			items: 4
+			items: 4,
+			loop: ($('#slide-leader-main .item').length > 4) ? true : false,
 		},
 		1080: {
-			items: 5
+			items: 5,
+			loop: ($('#slide-leader-main .item').length > 5) ? true : false,
 		},
 		1200: {
-			items: 6
+			items: 6,
+			loop: ($('#slide-leader-main .item').length > 6) ? true : false,
+		}
+
+	}
+});
+$('#slide-prize-main').owlCarousel({
+	nav: true,
+	autoplay: true,
+	margin: 10,
+	autoplayTimeout: 5000,
+	autoplayHoverPause: true,
+	responsive: {
+		0: {
+			items: 2,
+			margin: 10,
+			loop: ($('#slide-prize-main .item').length > 2) ? true : false,
+		},
+		540: {
+			items: 3,
+			margin: 10,
+			loop: ($('#slide-prize-main .item').length > 3) ? true : false,
+		},
+		768: {
+			items: 4,
+			loop: ($('#slide-prize-main .item').length > 4) ? true : false,
+		},
+		1080: {
+			items: 5,
+			loop: ($('#slide-prize-main .item').length > 5) ? true : false,
+		},
+		1200: {
+			items: 6,
+			loop: ($('#slide-prize-main .item').length > 6) ? true : false,
 		}
 
 	}

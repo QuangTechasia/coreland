@@ -562,8 +562,6 @@ nav#nav.menu-footer ul.wrap-menu li.item-menu:hover>a {
 
 .banner-index .item img {
     height: 100%;
-    min-height: 700px;
-    max-height: 760px;
     overflow: hidden;
 }
 
@@ -1386,6 +1384,40 @@ section.core-land .container {
     border: 1px solid rgb(205, 205, 205);
     transition: all .4s;
     margin: 0 3px;
+    line-height: 1;
+    padding-top: 1px;
+}
+.paging a.dau,
+.paging a.truoc,
+.paging a.sau,
+.paging a.cuoi{
+    font-size: 0;
+    position: relative;
+}
+.paging a.dau:before,
+.paging a.truoc:before,
+.paging a.sau:before,
+.paging a.cuoi:before{
+    font-family: "Font Awesome 5 Pro";
+    position: absolute;
+    top: 50%;
+    display: block;
+    font-size: 16px;
+    transform: translateY(-50%);
+    line-height: 1;
+    margin-top: 1px;
+}
+.paging a.dau:before{
+    content: "\f100";
+}
+.paging a.truoc:before{
+    content: "\f104";
+}
+.paging a.sau:before{
+    content: "\f105";
+}
+.paging a.cuoi:before{
+    content: "\f101";
 }
 
 .paging i {
@@ -2203,7 +2235,6 @@ input[type=range]::-moz-range-thumb {
     color: #FFF;
 }
 
-.wrap-blog-index {}
 
 .wrap-blog-index .item-blog .image-blog {
     height: 157px;
@@ -2397,7 +2428,6 @@ input[type=range]::-moz-range-thumb {
     color: #FFF;
 }
 
-.wrap-tag {}
 
 .wrap-tag ul {
     display: flex;
@@ -2819,7 +2849,6 @@ section#leadership .owl-carousel .owl-nav button {
     margin-bottom: 5px;
 }
 
-.wrap-tuyen-dung .wrap ul {}
 
 .wrap-tuyen-dung .wrap ul li {
     margin-bottom: 5px;
@@ -2842,7 +2871,6 @@ section#leadership .owl-carousel .owl-nav button {
     margin-bottom: 30px;
 }
 
-.wrap-contact-main {}
 
 .wrap-contact-main .wrap-address-footer:first-child {
     margin-bottom: 25px;
@@ -2922,7 +2950,6 @@ section#leadership .owl-carousel .owl-nav button {
     padding: 70px 0;
 }
 
-.wrap-contact-susess p {}
 
 .wrap-contact-susess .title-contact-sucess {
     font-size: 35px;
@@ -3087,7 +3114,6 @@ nav#nav.menu-footer .icon-toggle-menu {
     margin-bottom: 20px;
 }
 
-.wrap-search-form p .font-bold {}
 
 .Rectangle_56 {
     border-style: solid;
@@ -3242,5 +3268,5 @@ nav#nav:not(.menu-footer) ul.wrap-menu li.item-menu .icon-toggleSubmenu {
     display: none;
 }
 #banner-main{
-    margin-top: 30px;
+    margin-top: 50px;
 }
