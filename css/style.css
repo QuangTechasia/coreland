@@ -327,6 +327,12 @@ header#header {
     z-index: 10;
     transition: all .4s;
 }
+body.body-project-detail header#header{
+    position: relative;
+}
+body.body-project-detail main#main{
+    margin-top: -60px;
+}
 
 header#header.not-scroll {
     position: relative;
@@ -1755,7 +1761,7 @@ section.core-land .container {
     color: #000;
 }
 
-.sticky-nav-tabs {
+.wrap-nav-control {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1773,9 +1779,10 @@ section.core-land .container {
     text-align: center;
     padding: 0 2em;
     margin-bottom: 25px;
+    z-index: 20;
 }
 
-.sticky-nav-tabs {
+.wrap-nav-control {
     height: 60px;
 }
 
@@ -1783,7 +1790,7 @@ section.core-land .container {
     height: auto;
 }
 
-.sticky-nav-tabs-container {
+.tab-title-detail {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1798,15 +1805,17 @@ section.core-land .container {
     z-index: 20;
     -webkit-transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
     transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    background: #fafafa;
 }
 
-.sticky-nav-tabs-container .container .wrap-nav-tab {
+.tab-title-detail ul.nav {
     display: flex;
     position: relative;
     overflow: hidden;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-    background: #fafafa;
     height: 60px;
+    flex-wrap: unset;
+    flex-direction: row!important;
 }
 
 .sticky-nav-tabs-container--top-first {
@@ -1822,7 +1831,7 @@ section.core-land .container {
     z-index: 20;
 }
 
-.sticky-nav-tab {
+.tab-title-detail .nav-link {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1838,14 +1847,20 @@ section.core-land .container {
     transition: all 0.5s ease;
     text-transform: uppercase;
     font-size: 15px;
+    height: 100%;
+    border-radius: 0;
 }
 
-.sticky-nav-tab:hover,
-.sticky-nav-tab.active {
+.tab-title-detail .nav-link:hover,
+.tab-title-detail .nav-link.active {
     color: white;
     background: var(--color-blue-main);
     -webkit-transition: all 0.5s ease;
     transition: all 0.5s ease;
+}
+
+.wrap-nav-control .toggle-tab-mobile{
+    display: none;
 }
 
 .player {

@@ -761,6 +761,9 @@
     #blog-main.wrap-blog-index.pt-50{
         padding-top: 1px!important;
     }
+    .wrap-nav-control .toggle-tab-mobile{
+        display: block;
+    }
 }
 
 @media (max-width:991px) {

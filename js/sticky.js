@@ -38,21 +38,21 @@ class StickyNavigation {
 		} else {
 			$('.spa-header').removeClass('spa-header--scrolled');
 		}
-		let offset = ($('.sticky-nav-tabs').offset().top + $('.sticky-nav-tabs').height() - this.tabContainerHeight) - headerHeight;
+		let offset = ($('.wrap-nav-control').offset().top + $('.wrap-nav-control').height() - this.tabContainerHeight) - headerHeight;
 		if ($(window).scrollTop() > this.lastScroll && $(window).scrollTop() > offset) {
 			$('.spa-header').addClass('spa-header--move-up');
-			$('.sticky-nav-tabs-container').removeClass('sticky-nav-tabs-container--top-first');
-			$('.sticky-nav-tabs-container').addClass('sticky-nav-tabs-container--top-second');
+			$('.tab-title-detail').removeClass('sticky-nav-tabs-container--top-first');
+			$('.tab-title-detail').addClass('sticky-nav-tabs-container--top-second');
 		}
 		else if ($(window).scrollTop() < this.lastScroll && $(window).scrollTop() > offset) {
 			$('.spa-header').removeClass('spa-header--move-up');
-			$('.sticky-nav-tabs-container').removeClass('sticky-nav-tabs-container--top-second');
-			$('.sticky-nav-tabs-container').addClass('sticky-nav-tabs-container--top-first');
+			$('.tab-title-detail').removeClass('sticky-nav-tabs-container--top-second');
+			$('.tab-title-detail').addClass('sticky-nav-tabs-container--top-first');
 		}
 		else {
 			$('.spa-header').removeClass('spa-header--move-up');
-			$('.sticky-nav-tabs-container').removeClass('sticky-nav-tabs-container--top-first');
-			$('.sticky-nav-tabs-container').removeClass('sticky-nav-tabs-container--top-second');
+			$('.tab-title-detail').removeClass('sticky-nav-tabs-container--top-first');
+			$('.tab-title-detail').removeClass('sticky-nav-tabs-container--top-second');
 		}
 	}
 
@@ -90,6 +90,22 @@ class StickyNavigation {
 }
 
 new StickyNavigation();
+
+$(document).ready(function () {
+	$("#myScrollspy a").on('click', function (event) {
+		if (this.hash !== "") {
+			event.preventDefault();
+
+			var hash = this.hash;
+			$('html, body').animate({
+				scrollTop: $(hash).offset().top
+			}, 800, function () {
+
+				window.location.hash = hash;
+			});
+		}
+	});
+});
 
 
 

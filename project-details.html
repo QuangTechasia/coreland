@@ -17,8 +17,8 @@
     <link rel="stylesheet" type="text/css" href="css/responsive.css">
 </head>
 
-<body>
-    <header id="header" class="header-project-detail-not-scroll">
+<body data-spy="scroll" data-target="#myScrollspy" data-offset="1" class="body-project-detail">
+    <header id="header" class="">
         <div class="container">
             <a href="" title="" class="logo">
                 <img src="./images/logo.png" alt="">
@@ -134,28 +134,48 @@
         </section>
 
 
-
-        <section class="sticky-nav-tabs">
-            <div class="sticky-nav-tabs-container">
+        <nav class="wrap-nav-control" id="myScrollspy">
+            <div class="tab-title-detail">
+                <span class="toggle-tab-mobile"><i class="fal fa-bars"></i></span>
                 <div class="container">
-                    <div class="wrap-nav-tab">
-                        <a class="sticky-nav-tab font-bold active" href="#tab-1">tổng quan</a>
-                        <a class="sticky-nav-tab font-bold" href="#tab-2">vị trí</a>
-                        <a class="sticky-nav-tab font-bold" href="#tab-3">tiện ích</a>
-                        <a class="sticky-nav-tab font-bold" href="#tab-4">thiết kế</a>
-                        <a class="sticky-nav-tab font-bold" href="#tab-5">mặt bằng</a>
-                        <a class="sticky-nav-tab font-bold" href="#tab-6">hình ảnh thực tế</a>
-                        <a class="sticky-nav-tab font-bold" href="#tab-7">video</a>
-                        <a class="sticky-nav-tab font-bold" href="#tab-8">view 360</a>
-                        <a class="sticky-nav-tab font-bold" href="#tab-9">ưu đãi</a>
-                        <a class="sticky-nav-tab font-bold" href="#tab-10">tiến độ thanh toán</a>
-                        <a class="sticky-nav-tab font-bold" href="#tab-11">Tải tài liệu</a>
-                    </div>
-
-                    <!-- <span class="sticky-nav-tab-slider"></span>  -->
+                    <ul class="nav nav-pills flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link sticky-nav-tab font-bold active" href="#tab-1">tổng quan</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link sticky-nav-tab font-bold" href="#tab-2">vị trí</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link sticky-nav-tab font-bold" href="#tab-3">tiện ích</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link sticky-nav-tab font-bold" href="#tab-4">thiết kế</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link sticky-nav-tab font-bold" href="#tab-5">mặt bằng</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link sticky-nav-tab font-bold" href="#tab-6">hình ảnh thực tế</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link sticky-nav-tab font-bold" href="#tab-7">video </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link sticky-nav-tab font-bold" href="#tab-8">view 360</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link sticky-nav-tab font-bold" href="#tab-9">ưu đãi</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link sticky-nav-tab font-bold" href="#tab-10">tiến độ thanh toán</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link sticky-nav-tab font-bold" href="#tab-11">tải tài liệu</a>
+                        </li>
+                    </ul>
                 </div>
             </div>
-        </section>
+        </nav>
         <div class="container">
             <div class="row">
                 <div class="col-12 col-lg-9">
