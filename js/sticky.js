@@ -42,6 +42,7 @@ class StickyNavigation {
 		if ($(window).scrollTop() > this.lastScroll && $(window).scrollTop() > offset) {
 			$('.spa-header').addClass('spa-header--move-up');
 			$('.tab-title-detail').removeClass('sticky-nav-tabs-container--top-first');
+			$('.tab-title-detail').removeClass('active');
 			$('.tab-title-detail').addClass('sticky-nav-tabs-container--top-second');
 		}
 		else if ($(window).scrollTop() < this.lastScroll && $(window).scrollTop() > offset) {
@@ -52,6 +53,7 @@ class StickyNavigation {
 		else {
 			$('.spa-header').removeClass('spa-header--move-up');
 			$('.tab-title-detail').removeClass('sticky-nav-tabs-container--top-first');
+			$('.tab-title-detail').removeClass('active');
 			$('.tab-title-detail').removeClass('sticky-nav-tabs-container--top-second');
 		}
 	}
