@@ -1320,6 +1320,9 @@ section.core-land .container {
     margin: 0 auto;
     display: flex;
 }
+#slide-main.owl-carousel .owl-stage {
+    display: block;
+}
 
 .wrap-leader.customer-wrap .image-customer {
     border-radius: 0;
