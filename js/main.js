@@ -143,6 +143,11 @@ $(document).ready(function () {
     }
 
 
+	// add attribute
+	if($('#myScrollspy').hasClass('wrap-nav-control')){
+		$('body').attr({"data-spy": "scroll", "data-target":"#myScrollspy", "data-offset":"1", "class":"body-project-detail"})
+	}
+
 
 });
 
