@@ -262,6 +262,8 @@ $('#slide-blog-index-main').owlCarousel({
 
 let arrClass = ['slide-customer-main',  
 				'slide-project-index-main',
+				'slide-project-index-main-2', 
+				'slide-project-index-main-3', 
 				'slide-ykien-kh-main',
 				];
 for(var i = 0; i < arrClass.length; i++){
