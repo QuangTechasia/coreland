@@ -87,8 +87,18 @@ $(document).ready(function () {
 			$(this).parent('.tab-title-detail').toggleClass('active');
 		});
 	}
+	var win = $(window).width();
+	function widthIframeFb(){
+			let widthParent = $('.wrap-main-right').width();
+			var symbol = $(".wrap-iframe-facebook iframe")[0].src;
+			$(".wrap-iframe-facebook iframe")[0].src = symbol.replace('&width=380', '&width='+widthParent)
+			console.log(widthParent);
+			console.log($(".wrap-iframe-facebook iframe")[0].src);
+	}
+	widthIframeFb();
 	$(window).on('resize', function(){
         resize();
+		widthIframeFb();
     });
 
 
@@ -148,6 +158,17 @@ $(document).ready(function () {
 		$('body').attr({"data-spy": "scroll", "data-target":"#myScrollspy", "data-offset":"1", "class":"body-project-detail"})
 	}
 
+	// scroll top 
+	$('.scroll-top').click(function () {
+		$('html, body').animate({
+			scrollTop: 0
+		}, 2000)
+	});
+	var offset = 600,
+		$back_to_top = $('.scroll-top');
+	$(window).scroll(function () {
+		($(this).scrollTop() > offset) ? $back_to_top.addClass('visible-top') : $back_to_top.removeClass('visible-top');
+	});
 
 });
 
