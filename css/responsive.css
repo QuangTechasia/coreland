@@ -201,6 +201,15 @@
         margin-top: 15px;
         margin-bottom: 15px;
     }
+    .sticky-nav-tab {font-size: 14px;}
+    h4 {font-size: 16px;}
+    h5 {font-size: 15px;}
+    body {font-size: 15px !important;}
+    nav#nav ul.wrap-menu li.item-menu>a {font-size: 13px !important;}
+    .margin-t--20.margin-b--20.wrap-list-blog-top-main{
+        margin-bottom: -15px;
+        margin-top: -15px;
+    }
 
     .wrap-sustain.wrap-blog-list-main .item-project .box-image {
         height: 405px;
@@ -815,6 +824,43 @@
         align-items: flex-start;
         justify-content: flex-start;
     }
+    .tab-title-detail{
+        box-shadow: none;
+        background: transparent;
+    }
+    .wrap-nav-control .toggle-tab-mobile i{
+        font-size: 20px;
+        color: #FFF;
+    }
+    .tab-title-detail ul.nav{
+        display: none;
+    }
+    .tab-title-detail{
+        transition: all .3s
+    }
+    .tab-title-detail.active {
+        background: #FFF;
+        transition: all .3s;
+        box-shadow: 0 0 20px rgb(0 0 0 / 10%);
+    }
+    .tab-title-detail.active ul.nav{
+        display: flex;
+        flex-direction: column!important;
+        align-items: flex-start;
+        height: auto;
+    }
+    .tab-title-detail.active ul.nav li{
+        width: 100%;
+    }
+    .tab-title-detail.active ul.nav li a{
+        padding:10px;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+    .title-main .name-title.margin-b-25{
+        margin-bottom: 15px;
+    }
+    
 }
 
 @media (max-width:991px) {
